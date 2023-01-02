@@ -188,20 +188,20 @@ Strassen과 반대로 Winograd는 input activation이 적을 때(예를 들면 i
 
 이 Winograd를 linear algebraic formulation을 다음 행렬들로 나타낼 수 있다.
 
-$B^{T} = \begin{bmatrix} 1 & 0 & -1 & 0 \\ 0 & 1 & 1 & 0 \\ 0 & -1 & 1 & 0 \\ 0 & 1 & 0 & -1 \end{bmatrix}$
+$$B^{T} = \begin{bmatrix} 1 & 0 & -1 & 0 \\ 0 & 1 & 1 & 0 \\ 0 & -1 & 1 & 0 \\ 0 & 1 & 0 & -1 \end{bmatrix}$$
 
-$G = \begin{bmatrix} 1 & 0 & 0 \\ {1 \over 2} & {1 \over 2} & {1 \over 2} \\ {1 \over 2} & -{1 \over 2} & {1 \over 2} \\ 0 & 0 & 1 \end{bmatrix}$
+$$G = \begin{bmatrix} 1 & 0 & 0 \\ {1 \over 2} & {1 \over 2} & {1 \over 2} \\ {1 \over 2} & -{1 \over 2} & {1 \over 2} \\ 0 & 0 & 1 \end{bmatrix}$$
 
-$A^{T} = \begin{bmatrix} 1 & 1 & 1 & 0 \\ 0 & 1 & -1 & -1 \end{bmatrix}$
+$$A^{T} = \begin{bmatrix} 1 & 1 & 1 & 0 \\ 0 & 1 & -1 & -1 \end{bmatrix}$$
 
 
 - f: filter weight( $f_j$ ) 행렬은 다음과 같다.
 
-  $f = \begin{bmatrix} f_0 \\ f_1 \\ f_2 \end{bmatrix}$
+$$f = \begin{bmatrix} f_0 \\ f_1 \\ f_2 \end{bmatrix}$$
 
 - i: input activation( $i_j$ ) 행렬은 다음과 같다.
 
-  $i = {\begin{bmatrix} i_0 \\ i_1 \\ i_2 \\ i_3 \end{bmatrix}}$
+$$i = {\begin{bmatrix} i_0 \\ i_1 \\ i_2 \\ i_3 \end{bmatrix}}$$
 
 - 우선 filter와 input activation에 다음 연산을 수행한다. 결과는 "Winograd" space상에 위치한다고 할 수 있다.
 
